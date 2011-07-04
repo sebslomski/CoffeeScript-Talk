@@ -1,0 +1,48 @@
+Showoff
+
+* good parts vs javascript guide
+
+Installation
+Usage
+Significant Whitespace
+Functions
+Objects
+Lexical Scoping / Variable Safety
+Aliases / Operators
+Existential Operator
+OOP                             => Dressed with class
+* wears the prototype chain corretly
+* gives you super powers
+Pattern Matching                => Sexy siblings
+String & RegExp Interpolation
+Splat Arguments
+Array & Object Comprehension
+Slicing & Splicing
+Function Binding
+et cetera... (Rest)
+
+Exercise
+  - Convert code (``-style)
+  - do the showoff step by step
+
+Result
+Not for everybody
+
+
+Installation
+Usage
+Significant Whitespace
+Functions
+Splat Arguments
+Aliases
+Objects
+Object Orientation
+Arrays
+List Comprehensions
+Slicing
+Pattern Matching
+String & RegExp Interpolation
+Lexical&nbsp;Scoping &amp; Variable&nbsp;Safety
+Function Binding
+Et Cetera
+Questions?

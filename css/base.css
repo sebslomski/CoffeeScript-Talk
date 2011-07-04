@@ -1,0 +1,115 @@
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body, body div#preso, .slide {
+  background: black;
+  color: white;
+}
+h1 {
+  font-style: italic;
+  /* Versatz links - Versatz oben - Unschärfe (Blur) - Farbe */
+
+  text-shadow: 5px 5px 5px black;
+}
+h1.dark {
+  color: #111;
+  text-shadow: none;
+}
+h4 {
+  font-size: 28px;
+}
+.centered {
+  display: block;
+  margin: 0 auto;
+}
+div#footer {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+}
+div.box {
+  zoom: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+div.box:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+div.box.dark {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+div.box pre {
+  margin: 0;
+}
+div.box .javascript, div.box .coffeescript {
+  background-repeat: no-repeat;
+  background-position: top right;
+  min-height: 100px;
+}
+div.box .javascript {
+  background-image: url(../file/box/small/javascript.png);
+}
+div.box.red-border {
+  border: 5px solid red !important;
+}
+div.box .coffeescript {
+  background-image: url(../file/box/small/coffeescript.png);
+}
+div.box.green-border {
+  border: 5px solid green !important;
+}
+div.box .left, div.box .right {
+  width: 45%;
+}
+div.box .left pre, div.box .right pre {
+  margin-top: 40px;
+}
+div.box .left {
+  float: left;
+}
+div.box .right {
+  float: right;
+}
+div.box.equals {
+  background-image: url(../file/box/equals.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#footer span#talkInfo {
+  float: right;
+}
+.alias-first {
+  border-radius: 10px 10px 0 0 !important;
+}
+.alias-first .left, .alias-first .right {
+  min-height: 0 !important;
+  background-position: top center !important;
+}
+.alias:last-child {
+  border-radius: 0 0 10px 10px !important;
+}
+.alias {
+  margin-top: -30px !important;
+  padding-top: 0 !important;
+  border-radius: 0 !important;
+}
+.alias pre {
+  margin-top: 0 !important;
+}
+li {
+  padding: 5px 0;
+}
