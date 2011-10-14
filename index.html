@@ -31,10 +31,26 @@
 
 
   <script type="text/javascript">
+    var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+    if(!is_chrome) {
+      alert('This slideshow might not work with your browser. But it works with Chrome');
+    }
     $(function(){
       setupPreso(false, './');
     });
   </script>
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24408123-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 </head>
 
 <body>
@@ -71,30 +87,52 @@
 
   <div id="slides" class="offscreen" style="display:none;">
 
+
+    <div class="slide" data-transition="fade" style="background: white;">
+      <div class="content" ref="intro/english/1">
+        <div class="increment">
+          <img src="./file/intro/twitter-1.png" class="centered" style="margin-top: 50px;">
+          <img src="./file/intro/twitter-2.png" class="centered" style="margin-top: 50px;">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slide" data-transition="fade" style="background: white;">
+      <div class="content" ref="intro/english/2">
+        <h1 class="dark">Challenge Accepted</h1>
+        <img src="./file/intro/challenge-accepted.png" class="centered">
+      </div>
+    </div>
+
+
     <div class="slide" data-transition="fade" style="background: #720c17; color: #fad46e;">
       <div class="content center" ref="intro/intro/1">
         <h1>
           <img src="file/intro/lets-have.png" />
         </h1>
         <h3>by Sebastian Slomski</h3>
-        <h3>munichjs, 6 Jul 2011</h3>
+        <h3>MunichJS, 6 Jul 2011</h3>
       </div>
     </div>
 
 
-    <div class="slide" data-transition="fade">
-      <div class="content" ref="intro/intro/1">
-        <img src="./file/intro/good-parts.jpg" class="centered" style="margin-top: 80px;">
+    <div class="slide" data-transition="fade" style="background: url(./file/intro/good-parts.jpg);">
+      <div class="content" ref="intro/intro/2">
+        <h1>Javascript - The Good Parts</h1>
       </div>
     </div>
 
 
     <div class="slide" data-transition="fade" style="background: url(./file/intro/jashkenas.jpg);">
-      <div class="content" ref="intro/intro/2">
-        <h1>Facts</h1>
+      <div class="content" ref="intro/intro/3">
+        <h1>CoffeeScript to the rescue</h1>
 
         <div class="box increment">
           <h4>It's just JavaScript</h4>
+        </div>
+        <div class="box increment">
+          <h4>Passes through JavaScript Lint</h4>
         </div>
         <div class="box increment">
           <h4>Already at 1.1.1</h4>
@@ -103,10 +141,115 @@
           <h4>Gets shipped with Rails 3.1</h4>
         </div>
         <div class="box increment">
-          <h4>In production at Red Bull, 37 Signals, Github, ...</h4>
+          <h4>In production at 37 Signals, Github, ...</h4>
         </div>
-        <div class="box increment">
-          <h4>Passes through JavaScript Lint</h4>
+      </div>
+    </div>
+
+
+    <div class="slide" data-transition="fade" style="background: url(./file/intro/jashkenas.jpg);">
+      <div class="content" ref="intro/intro/4">
+        <h1>and even Crockford likes it!</h1>
+        <img src="./file/intro/victorious.png" class="centered">
+      </div>
+    </div>
+
+
+    <div class="slide" data-transition="fade" style="background: url(./file/features/.jpg);">
+      <div class="content" ref="intro/about-me/1">
+        <h1>About Me</h1>
+        <div class="box red-border">
+          <div class="javascript">
+<pre class="idle">
+<span class="Storage">var</span> me <span class="Keyword">= {</span>
+  name<span class="Keyword">:</span> <span class="String">"Sebastian Slomski"</span>,
+  age<span class="Keyword">:</span> <span class="Number">21</span>,
+  twitter<span class="Keyword">:</span> <span class="String">"sebslomski"</span>,
+  web<span class="Keyword">:</span> <span class="String">"http://sebastian-slomski.de"</span>,
+  background<span class="Keyword">:</span> <span class="Keyword">[</span><span class="String">"Linux"</span>, <span class="String">"Vim"</span>, <span class="String">"Python"</span><span class="Keyword">]</span>,
+  workingAt<span class="Keyword">: {</span>
+    company<span class="Keyword">:</span> <span class="String">"Catenate"</span>,
+    web<span class="Keyword">:</span> <span class="String">"http<span class="Keyword">:</span>//catenate.com"</span>,
+    jobPosition<span class="Keyword">:</span> <span class="String">"Front-End Solution Architect"</span>
+  <span class="Keyword">}</span>
+<span class="Keyword">};</span>
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slide" data-transition="fade" style="background: url(./file/features/.jpg);">
+      <div class="content" ref="intro/about-me/2">
+        <h1>About Me</h1>
+        <div class="box red-border">
+          <div class="javascript">
+<pre class="idle">
+<span class="Storage">var</span> me <span class="Keyword">=</span>
+  name<span class="Keyword">:</span> <span class="String">"Sebastian Slomski"</span>,
+  age<span class="Keyword">:</span> <span class="Number">21</span>,
+  twitter<span class="Keyword">:</span> <span class="String">"sebslomski"</span>,
+  web<span class="Keyword">:</span> <span class="String">"http://sebastian-slomski.de"</span>,
+  background<span class="Keyword">:</span> <span class="Keyword">[</span><span class="String">"Linux"</span>, <span class="String">"Vim"</span>, <span class="String">"Python"</span><span class="Keyword">]</span>,
+  workingAt<span class="Keyword">:</span>
+    company<span class="Keyword">:</span> <span class="String">"Catenate"</span>,
+    web<span class="Keyword">:</span> <span class="String">"http<span class="Keyword">:</span>//catenate.com"</span>,
+    jobPosition<span class="Keyword">:</span> <span class="String">"Front-End Solution Architect"</span>
+
+
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slide" data-transition="fade" style="background: url(./file/features/.jpg);">
+      <div class="content" ref="intro/about-me/3">
+        <h1>About Me</h1>
+        <div class="box red-border">
+          <div class="javascript">
+<pre class="idle">
+<span class="Storage">var</span> me <span class="Keyword">=</span>
+  name<span class="Keyword">:</span> <span class="String">"Sebastian Slomski"</span>
+  age<span class="Keyword">:</span> <span class="Number">21</span>
+  twitter<span class="Keyword">:</span> <span class="String">"sebslomski"</span>
+  web<span class="Keyword">:</span> <span class="String">"http://sebastian-slomski.de"</span>
+  background<span class="Keyword">:</span> <span class="Keyword">[</span><span class="String">"Linux"</span>, <span class="String">"Vim"</span>, <span class="String">"Python"</span><span class="Keyword">]</span>
+  workingAt<span class="Keyword">:</span>
+    company<span class="Keyword">:</span> <span class="String">"Catenate"</span>
+    web<span class="Keyword">:</span> <span class="String">"http<span class="Keyword">:</span>//catenate.com"</span>
+    jobPosition<span class="Keyword">:</span> <span class="String">"Front-End Solution Architect"</span>
+
+
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slide" data-transition="fade" style="background: url(./file/features/.jpg);">
+      <div class="content" ref="intro/about-me/4">
+        <h1>About Me</h1>
+        <div class="box green-border">
+          <div class="coffeescript">
+<pre class="idle">
+me <span class="Keyword">=</span>
+  name<span class="Keyword">:</span> <span class="String">"Sebastian Slomski"</span>
+  age<span class="Keyword">:</span> <span class="Number">21</span>
+  twitter<span class="Keyword">:</span> <span class="String">"sebslomski"</span>
+  web<span class="Keyword">:</span> <span class="String">"http://sebastian-slomski.de"</span>
+  background<span class="Keyword">:</span> <span class="Keyword">[</span><span class="String">"Linux"</span>, <span class="String">"Vim"</span>, <span class="String">"Python"</span><span class="Keyword">]</span>
+  workingAt<span class="Keyword">:</span>
+    company<span class="Keyword">:</span> <span class="String">"Catenate"</span>
+    web<span class="Keyword">:</span> <span class="String">"http<span class="Keyword">:</span>//catenate.com"</span>
+    jobPosition<span class="Keyword">:</span> <span class="String">"Front-End Solution Architect"</span>
+
+
+</pre>
+          </div>
         </div>
       </div>
     </div>
@@ -134,106 +277,6 @@
         </div>
         <div class="box increment">
           <pre>$ coffee --watch app.coffee</pre>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="slide" data-transition="fade" style="background: url(./file/features/.jpg);">
-      <div class="content" ref="intro/about-me/1">
-        <h1>About Me</h1>
-        <div class="box red-border">
-          <div class="javascript">
-<pre class="idle">
-<span class="Storage">var</span> me <span class="Keyword">= {</span>
-  name<span class="Keyword">:</span> <span class="String">"Sebastian Slomski"</span>,
-  age<span class="Keyword">:</span> <span class="Number">21</span>,
-  twitter<span class="Keyword">:</span> <span class="String">"sebslomski"</span>,
-  web<span class="Keyword">:</span> <span class="String">"http://sebastian-slomski.de"</span>,
-  background<span class="Keyword">:</span> <span class="Keyword">[</span><span class="String">"Linux"</span>, <span class="String">"Vim"</span>, <span class="String">"Python"</span><span class="Keyword">]</span>,
-  workingAt<span class="Keyword">: {</span>
-    company<span class="Keyword">:</span> <span class="String">"Catenate"</span>,
-    url<span class="Keyword">:</span> <span class="String">"http<span class="Keyword">:</span>//catenate.com"</span>,
-    jobPosition<span class="Keyword">:</span> <span class="String">"Mobile Web Developer"</span>
-  <span class="Keyword">}</span>
-<span class="Keyword">};</span>
-</pre>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="slide" data-transition="fade" style="background: url(./file/features/.jpg);">
-      <div class="content" ref="intro/about-me/2">
-        <h1>About Me</h1>
-        <div class="box red-border">
-          <div class="javascript">
-<pre class="idle">
-<span class="Storage">var</span> me <span class="Keyword">= {</span>
-  name<span class="Keyword">:</span> <span class="String">"Sebastian Slomski"</span>
-  age<span class="Keyword">:</span> <span class="Number">21</span>
-  twitter<span class="Keyword">:</span> <span class="String">"sebslomski"</span>
-  web<span class="Keyword">:</span> <span class="String">"http://sebastian-slomski.de"</span>
-  background<span class="Keyword">:</span> <span class="Keyword">[</span><span class="String">"Linux"</span>, <span class="String">"Vim"</span>, <span class="String">"Python"</span><span class="Keyword">]</span>
-  workingAt<span class="Keyword">: {</span>
-    company<span class="Keyword">:</span> <span class="String">"Catenate"</span>
-    url<span class="Keyword">:</span> <span class="String">"http<span class="Keyword">:</span>//catenate.com"</span>
-    jobPosition<span class="Keyword">:</span> <span class="String">"Mobile Web Developer"</span>
-  <span class="Keyword">}</span>
-<span class="Keyword">}</span>
-</pre>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="slide" data-transition="fade" style="background: url(./file/features/.jpg);">
-      <div class="content" ref="intro/about-me/3">
-        <h1>About Me</h1>
-        <div class="box red-border">
-          <div class="javascript">
-<pre class="idle">
-<span class="Storage">var</span> me <span class="Keyword">=</span>
-  name<span class="Keyword">:</span> <span class="String">"Sebastian Slomski"</span>
-  age<span class="Keyword">:</span> <span class="Number">21</span>
-  twitter<span class="Keyword">:</span> <span class="String">"sebslomski"</span>
-  web<span class="Keyword">:</span> <span class="String">"http://sebastian-slomski.de"</span>
-  background<span class="Keyword">:</span> <span class="Keyword">[</span><span class="String">"Linux"</span>, <span class="String">"Vim"</span>, <span class="String">"Python"</span><span class="Keyword">]</span>
-  workingAt<span class="Keyword">:</span>
-    company<span class="Keyword">:</span> <span class="String">"Catenate"</span>
-    url<span class="Keyword">:</span> <span class="String">"http<span class="Keyword">:</span>//catenate.com"</span>
-    jobPosition<span class="Keyword">:</span> <span class="String">"Mobile Web Developer"</span>
-
-
-</pre>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="slide" data-transition="fade" style="background: url(./file/features/.jpg);">
-      <div class="content" ref="intro/about-me/4">
-        <h1>About Me</h1>
-        <div class="box green-border">
-          <div class="coffeescript">
-<pre class="idle">
-me <span class="Keyword">=</span>
-  name<span class="Keyword">:</span> <span class="String">"Sebastian Slomski"</span>
-  age<span class="Keyword">:</span> <span class="Number">21</span>
-  twitter<span class="Keyword">:</span> <span class="String">"sebslomski"</span>
-  web<span class="Keyword">:</span> <span class="String">"http://sebastian-slomski.de"</span>
-  background<span class="Keyword">:</span> <span class="Keyword">[</span><span class="String">"Linux"</span>, <span class="String">"Vim"</span>, <span class="String">"Python"</span><span class="Keyword">]</span>
-  workingAt<span class="Keyword">:</span>
-    company<span class="Keyword">:</span> <span class="String">"Catenate"</span>
-    url<span class="Keyword">:</span> <span class="String">"http<span class="Keyword">:</span>//catenate.com"</span>
-    jobPosition<span class="Keyword">:</span> <span class="String">"Mobile Web Developer"</span>
-
-
-</pre>
-          </div>
         </div>
       </div>
     </div>
@@ -276,6 +319,7 @@ me <span class="Keyword">=</span>
           <div class="coffeescript">
 <pre class="idle">
 mood <span class="Keyword">=</span> greatlyImproved <span class="Keyword">if</span> singing
+
 date <span class="Keyword">=</span> <span class="Keyword">if</span> friday <span class="Keyword">then</span> sue <span class="Keyword">else</span> jill
 
 options <span class="Keyword">or=</span> defaults
@@ -318,8 +362,9 @@ options <span class="Keyword">||</span> (options <span class="Keyword">=</span> 
 <span class="FunctionName">square</span> = <span class="Storage">function</span>(<span class="FunctionArgument">x</span>) {
   <span class="Keyword">return</span> x <span class="Keyword">*</span> x;
 };
+
 <span class="FunctionName">cube</span> = <span class="Storage">function</span>(<span class="FunctionArgument">x</span>) {
-  <span class="Keyword">return</span> square(x) <span class="Keyword">*</span> x;
+  <span class="Keyword">return</span> <span class="FunctionName">square</span>(x) <span class="Keyword">*</span> x;
 };
 </pre>
           </div>
@@ -349,7 +394,8 @@ options <span class="Keyword">||</span> (options <span class="Keyword">=</span> 
   <span class="Keyword">if</span> (liquid <span class="Keyword">==</span> <span class="BuiltInConstant">null</span>) {
     liquid <span class="Keyword">=</span> <span class="String"><span class="String">"</span>coffee<span class="String">"</span></span>;
   }
-  <span class="Keyword">return</span> <span class="String"><span class="String">"</span>Filling the <span class="String">"</span></span> <span class="Keyword">+</span> container <span class="Keyword">+</span> <span class="String"><span class="String">"</span> with <span class="String">"</span></span> <span class="Keyword">+</span> liquid <span class="Keyword">+</span> <span class="String"><span class="String">"</span>...<span class="String">"</span></span>;
+  <span class="Keyword">return</span> <span class="String"><span class="String">"</span>Filling the <span class="String">"</span></span> <span class="Keyword">+</span> container <span class="Keyword">+</span>
+         <span class="String"><span class="String">"</span> with <span class="String">"</span></span> <span class="Keyword">+</span> liquid <span class="Keyword">+</span> <span class="String"><span class="String">"</span>...<span class="String">"</span></span>;
 };
 </pre>
           </div>
@@ -373,7 +419,7 @@ options <span class="Keyword">||</span> (options <span class="Keyword">=</span> 
 </pre>
 <br><br>
 <pre class="idle increment">
-<span class="FunctionName">awardMedals</span> <span class="Keyword">[</span><span class="String">"GER"</span>, <span class="String">"AUS"</span>, <span class="String">"USA"</span>, <span class="String">"NIG"</span><span class="Keyword">]</span>...
+<span class="FunctionName">awardMedals</span>(<span class="Keyword">[</span><span class="String">"GER"</span>, <span class="String">"AUS"</span>, <span class="String">"USA"</span>, <span class="String">"NIG"</span><span class="Keyword">]</span>...)
 </pre>
           </div>
         </div>
@@ -524,6 +570,23 @@ options <span class="Keyword">||</span> (options <span class="Keyword">=</span> 
         <h1>Existential Operator</h1>
 
         <div class="box increment">
+          <div class="javascript">
+<pre class="idle">
+<span class="Keyword">if</span> (variable) <span class="Keyword">{</span>
+...
+<span class="Keyword">}</span>
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slide" data-transition="fade" style="background: url(./file/features/existential-operator.jpg);">
+      <div class="content" ref="features/aliases/3">
+        <h1>Existential Operator</h1>
+
+        <div class="box">
           <div class="coffeescript">
           <br><br>
 <pre class="idle">
@@ -540,7 +603,7 @@ footprints <span class="Keyword">=</span> yeti <span class="Keyword">?</span> <s
 
 
     <div class="slide" data-transition="fade" style="background: url(./file/features/existential-operator.jpg);">
-      <div class="content" ref="features/aliases/3">
+      <div class="content" ref="features/aliases/4">
         <h1>Existential Operator</h1>
 
         <div class="box">
@@ -703,35 +766,6 @@ _ref <span class="Keyword">=</span> [<span class="String"><span class="String">'
     </div>
 
 
-    <div class="slide" data-transition="fade" style="background: url(./file/features/comprehensions.jpg);">
-      <div class="content" ref="features/comprehensions/2">
-        <h1 class="dark">List Comprehensions</h1>
-
-        <div class="box dark">
-          <div class="coffeescript">
-<pre class="idle">
-countdown <span class="Keyword">=</span> (num <span class="Keyword">for</span> num <span class="Keyword">in</span> <span class="Keyword">[</span><span class="Number">10</span>..<span class="Number">1</span><span class="Keyword">]</span>)
-</pre>
-          </div>
-        </div>
-        <div class="box dark increment">
-          <div class="javascript">
-<pre class="idle">
-<span class="Storage">var</span> countdown, num;
-countdown <span class="Keyword">=</span> (<span class="Storage">function</span>() {
-  <span class="Storage">var</span> _results;
-  _results <span class="Keyword">=</span> [];
-  <span class="Keyword">for</span> (num <span class="Keyword">=</span> <span class="Number">10</span>; num <span class="Keyword">&gt;=</span> <span class="Number">1</span>; num<span class="Keyword">--</span>) {
-    _results.<span class="LibraryFunction">push</span>(num);
-  }
-  <span class="Keyword">return</span> _results;
-})();
-</pre>
-          </div>
-        </div>
-      </div>
-    </div>
-
 
     <div class="slide" data-transition="fade" style="background: url(./file/features/slicing.jpg);">
       <div class="content" ref="features/slicing/1">
@@ -791,6 +825,38 @@ theSwitch <span class="Keyword">=</span> <span class="Number">0</span>
     </div>
 
 
+    <div class="slide" data-transition="fade" style="background: url(./file/features/pattern-matching.jpg);">
+      <div class="content" ref="features/pattern-matching/2">
+        <h1>Pattern Matching</h1>
+
+        <div class="box dark">
+          <div class="coffeescript">
+<pre class="idle" style="font-size: 28px;">
+<span class="FunctionName">weatherReport </span><span class="Keyword">=</span> <span class="FunctionArgument">(location)</span> <span class="Storage">-&gt;</span>
+  <span class="Comment"><span class="Comment">#</span> Make an Ajax request to fetch the weather...</span>
+  [location, <span class="Number">72</span>, <span class="String"><span class="String">"</span>Mostly Sunny<span class="String">"</span></span>]
+
+<span class="Keyword">[</span>city, temp, forecast<span class="Keyword">] =</span> weatherReport <span class="String"><span class="String">"</span>Munich<span class="String">"</span></span>
+</pre>
+          </div>
+        </div>
+        <div class="box dark increment">
+          <div class="javascript">
+<pre class="idle" style="font-size: 28px;">
+<span class="Storage">var</span> city, forecast, temp,
+    weatherReport, _ref;
+<span class="FunctionName">weatherReport</span> = <span class="Storage">function</span>(<span class="FunctionArgument">location</span>) {
+  <span class="Keyword">return</span> [location, <span class="Number">72</span>, <span class="String"><span class="String">"</span>Mostly Sunny<span class="String">"</span></span>];
+};
+_ref <span class="Keyword">=</span> weatherReport(<span class="String"><span class="String">"</span>Munich<span class="String">"</span></span>), city <span class="Keyword">=</span> _ref[<span class="Number">0</span>],
+temp <span class="Keyword">=</span> _ref[<span class="Number">1</span>], forecast <span class="Keyword">=</span> _ref[<span class="Number">2</span>];
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="slide" data-transition="fade" style="background: url(./file/features/strings.jpg);">
       <div class="content" ref="features/string-interpolation/1">
         <h1>String Interpolation</h1>
@@ -808,13 +874,14 @@ sentence <span class="Keyword">=</span> <span class="String"><span class="String
           </div>
         </div>
         <div class="box dark increment">
-          <div class="javascript">
+          <div class="coffeescript">
 <pre class="idle">
-<span class="Storage">var</span> author, quote, sentence;
-author <span class="Keyword">=</span> <span class="String"><span class="String">"</span>Wittgenstein<span class="String">"</span></span>;
-quote <span class="Keyword">=</span> <span class="String"><span class="String">"</span>A picture is a fact. -- <span class="String">"</span></span> <span class="Keyword">+</span> author;
-sentence <span class="Keyword">=</span> <span class="String"><span class="String">"</span><span class="String">"</span></span> <span class="Keyword">+</span> (<span class="Number">22</span> / <span class="Number">7</span>) <span class="Keyword">+</span> <span class="String">" is a decent"</span> <span class="Keyword">+</span>
-           <span class="String">approximation of π<span class="String">"</span></span>;
+mobyDick <span class="Keyword">=</span> <span class="String">"Call me Ishmael. Some
+  years ago -- never mind how long precisely
+  -- having little or no money in my purse,
+  and nothing particular to interest me on
+  shore, I thought I would sail about a little
+  and see the watery part of the world..."</span>
 </pre>
           </div>
         </div>
@@ -824,7 +891,7 @@ sentence <span class="Keyword">=</span> <span class="String"><span class="String
 
     <div class="slide" data-transition="fade" style="background: url(./file/features/variable-safety.jpg);">
       <div class="content" ref="features/variable-safety/1">
-        <h1>Lexical&nbsp;Scoping &amp; Variable&nbsp;Safety</h1>
+        <h1>Variable Safety</h1>
 
         <div class="box dark increment">
           <div class="coffeescript">
@@ -837,15 +904,7 @@ inner <span class="Keyword">=</span> changeNumbers()
 </pre>
             </div>
         </div>
-      </div>
-    </div>
-
-
-    <div class="slide" data-transition="fade" style="background: url(./file/features/variable-safety.jpg);">
-      <div class="content" ref="features/variable-safety/2">
-        <h1>Lexical&nbsp;Scoping &amp; Variable&nbsp;Safety</h1>
-
-        <div class="box dark">
+        <div class="box dark increment">
           <div class="javascript">
 <pre class="idle">
 <span class="Storage">var</span> changeNumbers, inner, outer;
@@ -863,7 +922,7 @@ inner <span class="Keyword">=</span> changeNumbers();
     </div>
 
 
-    <div class="slide" data-transition="fade" style="background: url(./file/features/binding.jpg);">
+    <!--div class="slide" data-transition="fade" style="background: url(./file/features/binding.jpg);">
       <div class="content" ref="features/function-binding/1">
         <h1 class="dark">Function Binding</h1>
 
@@ -908,18 +967,25 @@ inner <span class="Keyword">=</span> changeNumbers();
           </div>
         </div>
       </div>
-    </div>
+    </div-->
 
 
     <div class="slide" data-transition="fade">
-      <div class="content" ref="intro/outro/1">
+      <div class="content" ref="outro/outro/1">
         <br><br>
         <img src="./file/intro/i-dont-always.jpg" class="centered">
       </div>
     </div>
 
 
-    <div class="slide" data-transition="fade">
+    <div class="slide" data-transition="fade" style="background: url(./file/intro/rage.jpg);">
+      <div class="content" ref="outro/outro/2">
+        <h1>Debugging ...</h1>
+      </div>
+    </div>
+
+
+    <div class="slide" data-transition="fade" style="background: url(./file/intro/rage.jpg);">
       <div class="content" ref="outro/questions/1">
         <h1>Questions?</h1>
         <img src="./file/outro/trollface.png" class="centered">
@@ -933,7 +999,6 @@ inner <span class="Keyword">=</span> changeNumbers();
 
         <div class="box">
           <ul>
-            <li>http://www.flickr.com/photos/splat/3960955230</li>
             <li>http://www.flickr.com/photos/asirap/4835090471</li>
             <li>http://www.flickr.com/photos/michaeltuuk/5161176356</li>
             <li>http://www.flickr.com/photos/45660436@N03/4933414300</li>
@@ -948,7 +1013,8 @@ inner <span class="Keyword">=</span> changeNumbers();
             <li>http://www.myfreewallpapers.net/music/pages/guitar-strings.shtml</li>
             <li>http://aznbadger.files.wordpress.com/2010/07/punch-in-face-pix.jpg</li>
             <li>http://download.oracle.com/docs/cd/E13203_01/tuxedo/build20/setup/snaps/online3.gif</li>
-            <li>http://www.thewallpapers.org/photo/28345/Jennifer_Garner_0228_-_1600x1200_Wallpaper.jpg</li>
+            <li>http://www.thewallpapers.org/photo/28345</li>
+            <li>http://thesocietypages.org/thickculture/files/2009/07/os.jpg</li>
           </ul>
         </div>
       </div>
@@ -957,8 +1023,9 @@ inner <span class="Keyword">=</span> changeNumbers();
 
     <div class="slide" data-transition="fade">
       <div class="content" ref="outro/qr-code/1">
-        <h1>For the mobile guys</h1>
+        <h1>Get the slides</h1>
         <img src="./file/outro/qr-code.png" class="centered">
+        <h2>http://slides.sebastian-slomski.de/coffeescript</h2>
       </div>
     </div>
 

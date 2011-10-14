@@ -53,7 +53,8 @@ pre.idle .String {
    color: #00A33F;
 }
 pre.idle .FunctionName {
-   color: #21439C;
+   /* color: #21439C; */
+   color: #fcb868;
 }
 pre.idle .Variable {
   color: #A535AE;

@@ -1,0 +1,295 @@
+- Let's have a cup of coffeescript
+  - compiles down to js
+  - lets you write cleaner code
+  - a mix of Python, Ruby and Javascript.
+
+
+
+
+- Javascript - the good parts
+  - Who read this book?
+  - Lots of bad features
+    - more reliable, readable, and maintainable
+  -> good parts make only 1/3 of javascript
+
+
+
+- CoffeeScript to the rescue
+  - (jeremy ashkenas, author, backbone, underscore,
+     @ documentcloud)
+  - golden rule: it's only javascript
+  - output passes lintJS
+  - production ready: version 1.1.1
+  - gets shipped with rails 3.1
+  - in production @ 37 signals, github, many more
+
+  - and even Crockford likes it!
+
+
+
+
+
+
+- Talk about me
+  - name
+  - age
+  - working at
+    - catenate: Business Integration Company
+      - provide our clients with consulting,
+        technologies and solutions
+  - working as a Front-End Solution Architect
+
+
+
+
+
+
+
+
+  - this is a javascript object
+  - let's port it coffeescript
+    (1) whitespace significant for marking blocks
+      -> next slide
+    (2) one key per line -> remove the commas
+      -> next slide
+    (3) remove var statement -> coffeescript does this for you
+      - more about this later
+      -> next slide
+    -> result: valid coffeescript
+
+
+
+
+
+
+- Let's get started: Installation
+  - via node package manager
+
+
+- Usage
+  - launch interactive interpreter witch "coffee"
+  - "coffee -c file.coffee": compile source file to coffeescript
+  - "coffee --watch file.coffee": watches for changes and compiles
+    on demand
+
+
+
+
+
+
+
+- Conditions
+  - no braces
+  - Abreviations (one-liners)
+    - the value of "greatlyImproved" will be assigned to "mood"
+      if the condition singing is met
+    - when else-branch:
+      - "if"-keyword - condition
+        "then"-keyword - "true"-expression
+        "else"-keyword - "else branch expression
+    - "or-equals"-keywork:
+      - if "options" doesn't exists -> "options" = "defaults"
+    - js
+      - this is coffeescript output, nicely indented & readable
+
+
+
+- Functions
+  - defined by a optional list of parameters in parentheses, an
+    arrow and the function body
+  - default values for arguments
+    - no need for braces to invoke functions
+    - every function returns a expression (last statement)
+    - I will come late to this strange string interpolation
+
+
+
+
+
+
+
+
+
+- Splat Arguments
+  - js provides arguments object
+    - passing a variable number
+  - coffeescript has splats (three dots)
+    - for function definition as well as invocation
+
+
+
+
+
+
+
+
+
+
+
+- Alias
+  - coffeescript has aliases for the js operators
+  - is = triple-equals
+  - isnt, not, and, or
+  - true, yes, on for true
+  - false, no, off for false
+  - @ for this (you can still use this)
+  - of for in (i.e. in loops)
+  - in -> no js equivalent (for loops) (forEach)
+
+
+
+
+
+
+
+- Existential Operator
+  - a little difficult to check for existence in js
+    - next slide 
+    - if(variable) comes close, but fails for zero, empty
+      string and false
+  - coffeescripts "?"-operator returns true unless a variable
+    is "null" or "undefined"
+      -next slide
+      - like in ruby
+  - safer conditional assignement than "or"-"equals" with
+    "question-mark"-"equals"
+
+
+
+
+
+- Object Orentation
+  - js' prototype inheritance is a brain-bender.
+  - many frameworks to provide a cleaner syntax
+  - awkward: set prototype chain correctly & call super
+  - next slide
+  - but coffeescript has super powers!
+    - it provides a class structure
+      - name your class
+      - set the superclass
+      - assign properties
+      - define a constructor
+  - have a look at the animal-constructor.
+    there's another gimmick.
+    - @-sign before an argument, it gets automatically set as
+      a property of the class
+
+- List Comprehensions
+  - allows you to write one-liner loops like in python
+  - can be returned and assigned
+  - iterates over the list
+    - call the eat function with the items
+
+
+
+
+
+
+
+
+
+
+
+- Slicing & Splicing
+  - we have a list of numbers
+  - to copy only a range of them use triple-dots
+  - to select a range of this list write the range in a
+    square-braces behind the variable separated by 2 or 3 dots
+  - if you use 3 dots like in this example you exclude the
+    end, 2 dots include the end
+  - same syntax can be used to replace a segment of an array
+    with new values, called splicing
+
+
+
+
+
+
+
+- Pattern Matching
+  - assign an array to another array
+    - coffeescript breaks them up
+    - matches both sides against each other
+  - next slide
+  - it's also very helpful for dealing with functions that
+    return multiple values
+
+
+
+
+
+
+
+
+
+- String Interpolation
+  - we already had this at the function-slide
+  - double-quoted strings allow to interpolate values
+    using the #-curly-braces syntax
+
+  - multi-line strings are also allowed
+
+
+
+
+
+
+
+
+
+
+- Variable Safety
+  - remember the about-me-object at the beginning.
+  - get rid of var
+    - compiler makes sure, that all your variables are
+      declared within lexical scope
+
+  - Example: outer isn't declared again in the function,
+    because it is already in scope
+
+
+
+
+
+
+
+
+- Function binding
+  - in js the this keyword is dynamically scoped to the
+    current function
+  - FIXME FIXME FIXME
+  - fat arrow instead of normal arrow
+    - > function gets bound to the object
+        -> "this" is the object whom it's bound to
+
+
+
+
+
+
+
+
+
+- I don't always do javascript, but when I do,
+  I do it in coffeescript
+  - coffeescript as a lot advantages
+    - but also a few disadvantages
+      - compilation step
+        - makes debugging realy hard,
+          because the code you debug isn't the code
+          you wrote
+
+
+
+
+
+
+
+
+- Questions?
+
+- Credits
+
+- Grab this slides
+  - qr code
+  - website
